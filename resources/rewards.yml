@@ -1,0 +1,29 @@
+# ==========================================
+#         DAILY PATH - RECOMPENSAS
+# ==========================================
+# Variáveis disponíveis nos comandos: {PLAYER}
+
+# Recompensas que SEMPRE são entregues (Básico)
+standard:
+  - "give {PLAYER} apple 5"
+  - "xp 5L {PLAYER}"
+
+# Recompensas baseadas em CHANCE (Sorte)
+# Formato: "chance%:comando"
+chance_rewards:
+  - "10:give {PLAYER} diamond 1"       # 10% de chance
+  - "5:give {PLAYER} emerald 2"        # 5% de chance
+  - "1:give {PLAYER} netherite_ingot 1" # 1% de chance (Raro)
+
+# Recompensas por STREAK (Marcos)
+# Entregues APENAS quando o jogador atinge o dia exato
+milestones:
+  7:
+    - "give {PLAYER} iron_block 1"
+    - "say {PLAYER} completou 7 dias seguidos!"
+  14:
+    - "give {PLAYER} gold_block 1"
+    - "xp 10L {PLAYER}"
+  30:
+    - "give {PLAYER} diamond_block 1"
+    - "effect {PLAYER} strength 300 1"

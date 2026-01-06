@@ -1,0 +1,18 @@
+name: DailyPath
+version: 1.0.0
+main: br\com\dailypath\Main
+api: [5.0.0]
+description: Sistema de recompensas diárias com streak para SMP.
+author: gabrielqlna
+permissions:
+  dailypath.use:
+    description: Permite usar o comando /daily
+    default: true
+  dailypath.admin:
+    description: Permite recarregar e gerenciar o plugin
+    default: op
+commands:
+  daily:
+    description: Abre o menu de recompensa diária
+    permission: dailypath.use
+    aliases: [diario, reward]

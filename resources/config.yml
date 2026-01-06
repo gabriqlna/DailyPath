@@ -1,0 +1,31 @@
+# ==========================================
+#         DAILY PATH - CONFIGURAÇÃO
+# ==========================================
+
+settings:
+  # Se true, ativa o sistema de dias consecutivos (streak)
+  enable_streak: true
+  
+  # Se o jogador perder um dia:
+  # 'reset': volta para 0
+  # 'keep': mantém a streak atual (não sobe, mas não zera)
+  # 'reduce': diminui 1 dia
+  streak_loss_action: "reset"
+
+  # Som a tocar ao resgatar (nome vanilla)
+  claim_sound: "random.levelup"
+
+messages:
+  prefix: "§l§6Daily§ePath §r§8» §7"
+  no_permission: "§cVocê não tem permissão."
+  already_claimed: "§cVocê já pegou sua recompensa hoje! Volte amanhã."
+  streak_info: "§eStreak Atual: §b{STREAK} dias"
+  claim_success: "§aRecompensa resgatada com sucesso!"
+  broadcast_milestone: "§l§6Daily§ePath §r§8» §b{PLAYER} §7atingiu uma streak de §e{DAYS} dias§7!"
+  
+gui:
+  title: "§lRecompensa Diária"
+  content_available: "§fSua recompensa está pronta!\n\n§eStreak atual: §f{STREAK} dias\n§7Clique abaixo para resgatar."
+  content_unavailable: "§cVocê já resgatou hoje.\n\n§eStreak atual: §f{STREAK} dias\n§7Volte em breve."
+  button_claim: "§l§aRESGATAR AGORA"
+  button_close: "§cFechar"

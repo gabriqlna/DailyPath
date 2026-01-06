@@ -11,6 +11,9 @@ class DataManager {
 
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
+	if(!is_dir($plugin->getDataFolder() . "data/")){
+	  @mkdir($plugin->getDataFolder() . "data/", 0777, true);
+        }
         // Players.yml armazena: UUID: { last_claim: "Y-m-d", streak: int }
         $this->data = new Config($plugin->getDataFolder() . "data/players.yml", Config::YAML);
     }
